@@ -8,8 +8,26 @@ mostrar na tela o último ano que houve alistamento. Caso
 não tenha ocorrido alistamento, mostrar “Não houve
 alistamento nos últimos 10 anos”. (Usar push, lastIndexOf)*/
 
+var anos = []
+
+
 for (let i=2000; i <= 2009; i++){
 
-    var alistamento = prompt(`Houve alistamento no ano ${i}, "S" ou "N"?`)
+    anos.push(prompt(`Houve alistamento no ano ${i}, 'S' ou 'N'?`));
+    var indice = anos
+    var resultado = indice.lastIndexOf('S');   
+
+};
+
+    if(resultado != -1){
+
+        alert(`O último que houve alistamento é 200${resultado}.`);  
+
+    }else{
+
+        alert(`Não houve alistamento nos últimos 10 anos.`);
+
+    }
+
     
-}
+

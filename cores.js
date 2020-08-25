@@ -11,26 +11,19 @@ Perguntar “Adicionar no início da lista: ” e “Adicionar ao
 final da lista: ”. Mostrar na tela a sequência completa,
 incluindo preto e branco. (Utilizar push, unshift e concat).*/
 
-var primarias = ["amarelo", "vermelho", "azul"]
-var secundarias = ["laranja", "verde", "violeta"]
+var inputPrimarias = [];
+var inputSecundarias = [];
+var armazenar = [];
 
     for (let i=1; i <= 3; i++) {
 
-        let inputPrimarias = prompt(`Digite a cor primária nº${i}:`)
-        let inputSecundarias = prompt(`Digite a cor secundária nº${i}:`)
-
-
-        if ([inputPrimarias] == [primarias] && [inputSecundarias] == [secundarias]){
-
-            var armazenar = Array.prototype.push.apply(primarias, secundarias);
-            armazenar.unshift("preto")
-            armazenar.concat("branco")
-            alert(armazenar);
-            
-        } else {
-
-            alert("Tente outra vez!")
-
-        }
+        inputPrimarias.push(prompt(`Digite a cor primária nº${i}:`))
+        inputSecundarias.push(prompt(`Digite a cor secundária nº${i}:`))
 
     }
+    
+    inputPrimarias.unshift('preto')
+    Array.prototype.push.apply(inputPrimarias, inputSecundarias);
+    inputPrimarias.push('branco')
+
+    alert(inputPrimarias);

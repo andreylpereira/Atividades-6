@@ -5,7 +5,19 @@ digitados que não são o maior e multiplicá-los
 individualmente pelo maior. Mostrar a soma das
 multiplicações. (Utilizar push, sort)*/
 
-for (let i=1; i <= 5; i++){
+let numeros = []
+var resultado = []
 
-    let alistamento = prompt(`Digite um número:`)
+for (i=1; i <= 5; i++){
+
+    numeros.push(Number(prompt(`Digite um número:`)));
+    var ordenados = numeros.sort(function(a, b) {
+        return a - b;
+      });
+
+      resultado = (ordenados[0] + ordenados[1] + ordenados[2] + ordenados[3]) * (ordenados[4]);
+
 }
+
+alert(resultado);
+

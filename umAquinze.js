@@ -4,11 +4,9 @@ Desenvolver um programa que remova os 10 últimos
 números para corrigi-la. Mostrar a lista corrigida na tela.
 (Utilizar pop)*/
 
-for(i=9; i <= 15; i++){
 
   var lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-  var resultado = [lista.pop() + lista.pop() + lista.pop() + lista.pop() + lista.pop()];
+  var resultado = lista.splice(5, 10);
 
-}
-
-console.log(lista);
+  
+alert(lista);
